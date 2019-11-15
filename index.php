@@ -30,8 +30,7 @@
 			$_SESSION['useremail']=$row['useremail'];
 			$_SESSION['role']=$row['role'];
 			
-			echo 'Admin Login Successful';
-			header('refresh:1; dashboard.php'); 
+			header('refresh:0.5; dashboard.php'); 
 		
 		} else if(	$row['useremail'] == $useremail AND 
 					$row['password'] == $pass AND 
@@ -44,17 +43,20 @@
 			$_SESSION['role']=$row['role'];
 
 			echo $success='User Login Successful';
-			header('refresh:1; user.php'); 
+			header('refresh:0.5; user.php'); 
 
 		} else {
 
-			echo'Login Failed. Check Username or Password.';
+			echo '<div class="alert alert-danger" role="alert">
+  					<center>Something went wrong. Check both username and password!</center>
+				</div>';
 		
 		} // end of if--else
 	
 	} // end of login code
 	
 ?>
+
 
 
 <!DOCTYPE html>
@@ -87,6 +89,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
+<div class="container">
+	
+
 <div class="login-box">
   <div class="login-logo">
     <a href="index.php"><b> POS </b>LTE</a>
@@ -97,11 +102,11 @@
 
     <form action="#" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="txt_email" placeholder="Email">
+        <input type="email" class="form-control" name="txt_email" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="txt_password" placeholder="Password">
+        <input type="password" class="form-control" name="txt_password" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -127,6 +132,7 @@
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
+</div>
 
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -134,6 +140,7 @@
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
+
 <script>
   $(function () {
     $('input').iCheck({
@@ -143,5 +150,6 @@
     });
   });
 </script>
+
 </body>
 </html>
