@@ -104,7 +104,7 @@ desired effect
               <li class="user-footer">
                 
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Change Password</a>
+                  <a href="changepassword.php" class="btn btn-default btn-flat">Change Password</a>
                 </div>
                 <div class="pull-right">
                   <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -148,11 +148,15 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Menu</li>
+        <!-- <li class="header">Menu</li> -->
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
+        <li class="active"><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="categories.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
+        <li><a href="products.php"><i class="fa fa-shopping-bag"></i> <span>Products</span></a></li>
+        <li><a href="sales.php"><i class="fa fa-area-chart "></i> <span>Sales</span></a></li>
+        <li><a href="registeration.php"><i class="fa fa-address-book"></i> <span>Registeration</span></a></li>
+       
+       <!--  <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
@@ -162,7 +166,7 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
       <!-- /.sidebar-menu -->
     </section>
