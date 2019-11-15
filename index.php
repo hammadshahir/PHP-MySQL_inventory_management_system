@@ -1,11 +1,13 @@
-	<!-- Sweet Alerts -->
-	<script src="bower_components/sweetalert/sweetalert.js"></script>
-	<!-- jQuery 3 -->
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<!-- Bootstrap 3.3.7 -->
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- iCheck -->
-	<script src="plugins/iCheck/icheck.min.js"></script>
+<!-- jQuery 3 -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- iCheck -->
+  <script src="plugins/iCheck/icheck.min.js"></script>
+  <!-- Admin LTE App -->
+  <script type="text/javascript" src="dist/js/adminlte.min.js"></script>
+   <!-- Sweet Alerts -->
+  <script src="bower_components/sweetalert/sweetalert.js"></script>
 	
 
 <?php
@@ -57,7 +59,7 @@
 		} else {
 
 			echo '<div class="alert alert-danger" role="alert">
-  					<center>Something went wrong. Check both username and password!</center>
+  					<center>Something went wrong. Check both username and password are correct.</center>
 				</div>';
 		
 		} // end of if--else
