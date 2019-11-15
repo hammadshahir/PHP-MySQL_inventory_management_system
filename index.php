@@ -1,5 +1,15 @@
-<?php
+	<!-- Sweet Alerts -->
+	<script src="bower_components/sweetalert/sweetalert.js"></script>
+	<!-- jQuery 3 -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- iCheck -->
+	<script src="plugins/iCheck/icheck.min.js"></script>
 	
+
+<?php
+
 	include_once('config/connectdb.php');
 	session_start();
 	
@@ -9,7 +19,7 @@
 		$useremail = $_POST['txt_email'];
 		$pass = $_POST['txt_password'];
 
-		// query for login page
+		// SQL query for login page
 
 		$select = $pdo->prepare("SELECT *
 								FROM tbl_user
@@ -18,8 +28,7 @@
 		$select->execute();
 			
 		$row = $select->fetch(PDO::FETCH_ASSOC);
-		// echo "<pre>";
-		// print_r($row);
+		
 
 		if( $row['useremail'] == $useremail AND 
 			$row['password'] == $pass AND 
@@ -98,7 +107,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign into your account</p>
+    <p class="login-box-msg"><strong>Account Login</strong></p>
 
     <form action="#" method="post">
       <div class="form-group has-feedback">
@@ -115,7 +124,7 @@
             <!-- <label>
               <input type="checkbox"> Remember Me
             </label> -->
-            <a href="#">I forgot my password</a>
+            <a href="#" onclick="swal('Forgot Password?', 'Please check with your administrator to reset password.', 'error');">I forgot my password</a>
           </div>
         </div>
         <!-- /.col -->
@@ -134,12 +143,7 @@
 <!-- /.login-box -->
 </div>
 
-<!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="plugins/iCheck/icheck.min.js"></script>
+
 
 <script>
   $(function () {
