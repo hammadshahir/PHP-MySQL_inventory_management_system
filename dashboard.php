@@ -3,13 +3,16 @@
   include_once('config/connectdb.php');
   
   session_start();  
-  if($_SESSION['useremail'] == "") {
+  if($_SESSION['useremail'] == "" OR $_SESSION['role']=="User") {
       header('location:index.php');
       
     }
 
 
   include_once('inc/header.php');
+
+  
+
 ?>
 
 
