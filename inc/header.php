@@ -182,9 +182,10 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li><a href="category.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
-        <li><a href="products.php"><i class="fa fa-shopping-bag"></i> <span>Products</span></a></li>
-        <li><a href="sales.php"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
-        <li><a href="sales.php"><i class="fa fa-money"></i> <span>Billing</span></a></li>
+        <li><a href="productlist.php"><i class="fa fa-shopping-bag"></i> <span>Product List</span></a></li>
+        <li><a href="addproduct.php"><i class="fa fa-shopping-bag"></i> <span>Add Products</span></a></li>
+        <li><a href="#"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
+        <li><a href="#"><i class="fa fa-money"></i> <span>Billing</span></a></li>
         <li><a href="registeration.php"><i class="fa fa-address-book"></i> <span>Users</span></a></li>
        
        
