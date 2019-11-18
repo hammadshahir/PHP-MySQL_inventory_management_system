@@ -62,14 +62,14 @@
 								INSERT INTO tbl_product(pname, pmodel, pcategory, purchase_price, sales_price, pstock, pdescription, pimage) 
 								VALUES(:pname,:pmodel, :pcategory, :purchaseprice, :salesprice, :pstock, :pdescription, :pimage)"); 
      
-	     $insert->bindParam(':pname',$productname);
-	     $insert->bindParam(':pmodel',$productmodel); 
-	     $insert->bindParam(':pcategory',$category);
-	     $insert->bindParam(':purchaseprice',$purchaseprice);
-	     $insert->bindParam(':salesprice',$salesprice);
-	     $insert->bindParam(':pstock',$stock);
-	     $insert->bindParam(':pdescription',$pdescription);
-	     $insert->bindParam(':pimage',$productimage);
+	     $insert->bindParam(':pname', $productname);
+	     $insert->bindParam(':pmodel', $productmodel); 
+	     $insert->bindParam(':pcategory', $category);
+	     $insert->bindParam(':purchaseprice', $purchaseprice);
+	     $insert->bindParam(':salesprice', $salesprice);
+	     $insert->bindParam(':pstock', $stock);
+	     $insert->bindParam(':pdescription', $pdescription);
+	     $insert->bindParam(':pimage', $productimage);
      
      
 		if($insert->execute()){

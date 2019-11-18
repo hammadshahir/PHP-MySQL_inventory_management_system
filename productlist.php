@@ -17,7 +17,7 @@
     <section class="content-header">
       <h1>
         Products.
-        <small>Edit / Update / Delete Products</small>
+        <small>View / Update / Delete Products</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -34,7 +34,7 @@
          <div class="box box-primary">
           
           <div class="box-header with-border">
-            <h3 class="box-title">All fields are required. </h3>
+            <h3 class="box-title">List of all products with quantitities available. </h3>
           </div>
 
           <div class="box-body">
@@ -75,13 +75,21 @@
                                     <td>'.$row->pstock.'</td>
                                     
                                     
-                                    <td><img src="productimages/'.$row->pimage.'"class=img-rounded" width="40px" height="40px"></td>
+                                    <td>
+                                        <img src="productimages/'.$row->pimage.'"class=img-rounded" width="40px" height="40px">
+                                      </td>
                                     
-                                    <td><a href="viewproduct.php?id='.$row->pid.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-eye-open" style="color:#ffffff" data-toggle="tool-tip" title="View Product"></span></a></td>
+                                    <td>
+                                        <a href="viewproduct.php?id='.$row->pid.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-eye-open" style="color:#ffffff" data-toggle="tool-tip" title="View Product"></span></a>
+                                      </td>
                                    
-                                   <td><a href="editproduct.php?id='.$row->pid.'" class="btn btn-warning btn-sm" role ="button" name="updateButton"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Product"></span></a></td>
+                                   <td>
+                                      <a href="editproduct.php?id='.$row->pid.'" class="btn btn-warning btn-sm" role ="button" name="btnaupdate"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Product"></span></a>
+                                    </td>
                                    
-                                   <td><a href="deleteproduct.php?id='.$row->pid.'" class="btn btn-danger btn-sm" role ="button" name="deleteButton"><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tool-tip" title="Delete Product"></span></a></td>
+                                   <td>
+                                      <button id='.$row->pid.' class="btn btn-danger btn-sm btndanger btndelete"><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tool-tip" title="Delete Product"></span></button>
+                                    </td>
                                   </tr> 
                                 ';
                             }
@@ -123,6 +131,54 @@
     } );
 
   </script>
+
+  <!-- Delete Button Code -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('.btndelete').click(function(){
+        var tdh = $(this);
+        var id = $(this).attr("id");
+
+
+        // Sweet Alert Code
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this product data.",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+
+                 $.ajax({
+                          url:'deleteproduct.php',
+                          type:'post',
+                          data:{
+                            pidd:id
+                          },
+                          success:function(data) {
+                            tdh.parents('tr').hide();
+                          }
+                        });
+
+              swal("Poof! Your product has been deleted.", {
+                icon: "success",
+              });
+            } else {
+              swal("Your product is not deleted.");
+            }
+          });
+
+
+     
+      });
+
+    });
+  </script>
+  
 
  <?php
 	
