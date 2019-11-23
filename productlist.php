@@ -38,65 +38,66 @@
           </div>
 
           <div class="box-body">
-            <table class="table table-stripped" id="tableproductlist">
-                    <thead>
-                      
-                      <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>Model</th>
-                        <th>Category</th>
-                        <th>Purchase Price</th>
-                        <th>Sales Price</th>
-                        <th>Stock</th>
-                        <th>Image</th>
-                        <th>View</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                      </tr>
+            <div style="overflow-x: auto;">
+              <table class="table table-stripped" id="tableproductlist">
+                      <thead>
+                        
+                        <tr>
+                          <th>No.</th>
+                          <th>Name</th>
+                          <th>Model</th>
+                          <th>Category</th>
+                          <th>Purchase Price</th>
+                          <th>Sales Price</th>
+                          <th>Stock</th>
+                          <th>Image</th>
+                          <th>View</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
+                        </tr>
 
-                    </thead>
-                    <tbody>
-                        <?php
+                      </thead>
+                      <tbody>
+                          <?php
 
-                          $select = $pdo->prepare("SELECT * FROM tbl_product ORDER BY pid ASC ");
-                          
-                          $select->execute();
-                          
-                          while($row = $select->fetch(PDO::FETCH_OBJ)) {
+                            $select = $pdo->prepare("SELECT * FROM tbl_product ORDER BY pid ASC ");
+                            
+                            $select->execute();
+                            
+                            while($row = $select->fetch(PDO::FETCH_OBJ)) {
 
-                            echo' <tr>
-                                    <td>'.$row->pid.'</td>
-                                    <td>'.$row->pname.'</td>
-                                    <td>'.$row->pmodel.'</td>
-                                    <td>'.$row->pcategory.'</td>
-                                    <td>'.$row->purchase_price.'</td>
-                                    <td>'.$row->sales_price.'</td>
-                                    <td>'.$row->pstock.'</td>
-                                    
-                                    
-                                    <td>
-                                        <img src="productimages/'.$row->pimage.'"class=img-rounded" width="40px" height="40px">
+                              echo' <tr>
+                                      <td>'.$row->pid.'</td>
+                                      <td>'.$row->pname.'</td>
+                                      <td>'.$row->pmodel.'</td>
+                                      <td>'.$row->pcategory.'</td>
+                                      <td>'.$row->purchase_price.'</td>
+                                      <td>'.$row->sales_price.'</td>
+                                      <td>'.$row->pstock.'</td>
+                                      
+                                      
+                                      <td>
+                                          <img src="productimages/'.$row->pimage.'"class=img-rounded" width="40px" height="40px">
+                                        </td>
+                                      
+                                      <td>
+                                          <a href="viewproduct.php?id='.$row->pid.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-eye-open" style="color:#ffffff" data-toggle="tool-tip" title="View Product"></span></a>
+                                        </td>
+                                     
+                                     <td>
+                                        <a href="editproduct.php?id='.$row->pid.'" class="btn btn-warning btn-sm" role ="button" name="btnaupdate"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Product"></span></a>
                                       </td>
-                                    
-                                    <td>
-                                        <a href="viewproduct.php?id='.$row->pid.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-eye-open" style="color:#ffffff" data-toggle="tool-tip" title="View Product"></span></a>
+                                     
+                                     <td>
+                                        <button id='.$row->pid.' class="btn btn-danger btn-sm btndanger btndelete"><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tool-tip" title="Delete Product"></span></button>
                                       </td>
-                                   
-                                   <td>
-                                      <a href="editproduct.php?id='.$row->pid.'" class="btn btn-warning btn-sm" role ="button" name="btnaupdate"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Product"></span></a>
-                                    </td>
-                                   
-                                   <td>
-                                      <button id='.$row->pid.' class="btn btn-danger btn-sm btndanger btndelete"><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tool-tip" title="Delete Product"></span></button>
-                                    </td>
-                                  </tr> 
-                                ';
-                            }
-                        ?>
-                    </tbody>
-                  </table>
-
+                                    </tr> 
+                                  ';
+                              }
+                          ?>
+                      </tbody>
+                    </table>
+                </div>
           </div>
 
     </section>

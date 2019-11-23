@@ -22,8 +22,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- DataTables Javascript-->
   <script src = "bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
   <script src = "bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  
-
+  <!-- InputMask -->
+  <script src="plugins/input-mask/jquery.inputmask.js"></script>
+  <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+  <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+  <!-- date-range-picker -->
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap datepicker -->
+  <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!-- iCheck 1.0.1 -->
+  <script src="plugins/iCheck/icheck.min.js"></script>
+  <!-- Select2 -->
+  <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
 
 
   <title>Dashboard | Administrator</title>
@@ -62,6 +73,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   
+   <!-- daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="plugins/iCheck/all.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -92,9 +111,9 @@ desired effect
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>A</span>
+      <span class="logo-mini"><b>P</b>I</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">Admin Area</span>
+      <span class="logo-lg">POS</span>
     </a>
 
     <!-- Header Navbar -->
@@ -179,14 +198,15 @@ desired effect
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <!-- <li class="header">Menu</li> -->
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        
+        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li><a href="category.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
         <li><a href="productlist.php"><i class="fa fa-shopping-bag"></i> <span>Product List</span></a></li>
         <li><a href="addproduct.php"><i class="fa fa-plus"></i> <span>Add Products</span></a></li>
         <li><a href="#"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
+        <li><a href="createorder.php"><i class="fa fa-eur"></i> <span>Create Order</span></a></li>
         <li><a href="#"><i class="fa fa-money"></i> <span>Billing</span></a></li>
-        <li><a href="registeration.php"><i class="fa fa-address-book"></i> <span>Users</span></a></li>
+        <li><a href="registeration.php"><i class="fa fa-users"></i> <span>Users</span></a></li>
        
        
       </ul>

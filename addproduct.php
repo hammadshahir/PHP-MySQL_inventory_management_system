@@ -166,45 +166,44 @@
 	          	<p>All fields are required. </p>
 	          	<form action="" method="POST" name="form_product" enctype = "multipart/form-data">
 	          		<div class="col-md-6">
-	          		
-	          		<div class="form-group">	
-	                    <label for="product">Product Name:</label>
-	                    <input type="text" class="form-control" name="txtproductname" id="full_name" placeholder="Enter Product Name" required>
-                  	</div>
-                  	<div class="form-group">
-	                    <label for="userpassword">Product Model:</label>
-	                    <input type="text" class="form-control" name="txtproductmodel" id="txtprice" placeholder="Enter Product Model">
-	                </div>
-	                <div class="form-group">
-	                    <label for="category">Choose Product Category:</label>
-	                    <select class="form-control" name="txtselect_option" required>
-	                    	<option value="">Select Category</option>
-	                    	<?php
-	                    		
-	                    		$select = $pdo->prepare("SELECT * FROM tbl_category ORDER BY catid ASC");
-	                    		$select->execute();
-	                    		
-	                    		while ($record = $select->fetch(PDO::FETCH_ASSOC)) {
-	                    			extract($record);
-	                    		
-	                    	?>
-	                    		<option><?php echo $record['category']; ?></option>
-	                    	
-	                    	<?php
-	                    		
-	                    		}
-	                    	?>
-	                    </select>                
-	                </div>
+		          		<div class="form-group">	
+		                    <label for="product">Product Name:</label>
+		                    <input type="text" class="form-control" name="txtproductname" id="full_name" placeholder="Enter Product Name" required>
+	                  	</div>
+	                  	<div class="form-group">
+		                    <label for="userpassword">Product Model:</label>
+		                    <input type="text" class="form-control" name="txtproductmodel" id="txtprice" placeholder="Enter Product Model">
+		                </div>
+			                <div class="form-group">
+			                    <label for="category">Choose Product Category:</label>
+			                    <select class="form-control" name="txtselect_option" required>
+			                    	<option value="">Select Category</option>
+			                    	<?php
+			                    		
+			                    		$select = $pdo->prepare("SELECT * FROM tbl_category ORDER BY catid ASC");
+			                    		$select->execute();
+			                    		
+			                    		while ($record = $select->fetch(PDO::FETCH_ASSOC)) {
+			                    			extract($record);
+			                    		
+			                    	?>
+			                    		<option><?php echo $record['category']; ?></option>
+			                    	
+			                    	<?php
+			                    		
+			                    		}
+			                    	?>
+			                    </select>                
+			                </div>
 	                 
-	                <div class="form-group">
-	                    <label for="userpassword">Product Purchase Price:</label>
-	                    <input type="number" min="1"  class="form-control" name="txtppurchaseprice" id="txtproductprice" placeholder="Enter Purchase Price" required>
-	                </div>
-	                 <div class="form-group">
-	                    <label for="userpassword">Sales Price:</label>
-	                    <input type="number" min="1" class="form-control" name="txtpsalesprice" id="txtsaleprice" placeholder="Enter Sales Price" required>
-	                </div>
+		                <div class="form-group">
+		                    <label for="userpassword">Product Purchase Price:</label>
+		                    <input type="number" min="1"  class="form-control" name="txtppurchaseprice" id="txtproductprice" placeholder="Enter Purchase Price" required>
+		                </div>
+		                 <div class="form-group">
+		                    <label for="userpassword">Sales Price:</label>
+		                    <input type="number" min="1" class="form-control" name="txtpsalesprice" id="txtsaleprice" placeholder="Enter Sales Price" required>
+		                </div>
 	          		</div>
 	          		<div class="col-md-6">
 	          			 <div class="form-group">

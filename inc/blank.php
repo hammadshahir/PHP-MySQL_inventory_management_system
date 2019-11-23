@@ -1,5 +1,10 @@
 <?php
+  
+  include_once('config/connectdb.php');
+  session_start();
+
 	include_once('inc/header.php');
+
 ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
