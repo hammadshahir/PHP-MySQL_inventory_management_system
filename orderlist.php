@@ -1,6 +1,7 @@
 <?php
   
   include_once('config/connectdb.php');
+  
   session_start();
 
 	include_once('inc/header.php');
@@ -45,8 +46,8 @@
                           <th>Total</th>
                           <th>Paid</th>
                           <th>Due</th>
+                          <th>Payment Method</th>
                           <th>Print</th>
-                         
                           <th>Edit</th>
                           <th>Delete</th>
                         </tr>
@@ -64,18 +65,18 @@
                               echo' <tr>
                                       <td>'.$row->invoice_id.'</td>
                                       <td>'.$row->customer_name.'</td>
-                                      <td>'.$row->orderdate.'</td>
-                                      <td>'.$row->total.'</td>
-                                      <td>'.$row->paid.'</td>
-                                      <td>'.$row->due.'</td>
+                                      <td>'.$row->order_date.'</td>
+                                      <td>'.$row->total_amount.'</td>
+                                      <td>'.$row->paid_amount.'</td>
+                                      <td>'.$row->due_amount.'</td>
                                       <td>'.$row->payment_type.'</td>
                                                                            
                                       <td>
-                                          <a href="viewproduct.php?id='.$row->invoice_id.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-eye-open" style="color:#ffffff" data-toggle="tool-tip" title="Print Invoice"></span></a>
+                                          <a href="viewproduct.php?id='.$row->invoice_id.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-print" style="color:#ffffff" data-toggle="tool-tip" title="Print Invoice"></span></a>
                                         </td>
                                      
                                      <td>
-                                        <a href="editproduct.php?id='.$row->invoice_id.'" class="btn btn-warning btn-sm" role ="button" name="btnaupdate"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Order"></span></a>
+                                        <a href="editorder.php?id='.$row->invoice_id.'" class="btn btn-warning btn-sm" role ="button" name="btnaupdate"><span class="glyphicon glyphicon-edit" style="color:#ffffff" data-toggle="tool-tip" title="Edit Order"></span></a>
                                       </td>
                                      
                                      <td>

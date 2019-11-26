@@ -199,14 +199,15 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <!-- <li class="header">Menu</li> -->
         
-        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li><a href="category.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
-        <li><a href="productlist.php"><i class="fa fa-shopping-bag"></i> <span>Product List</span></a></li>
-        <li><a href="addproduct.php"><i class="fa fa-plus"></i> <span>Add Products</span></a></li>
-        <li><a href="#"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
-        <li><a href="createorder.php"><i class="fa fa-eur"></i> <span>Create Order</span></a></li>
-        <li><a href="#"><i class="fa fa-money"></i> <span>Billing</span></a></li>
-        <li><a href="registeration.php"><i class="fa fa-users"></i> <span>Users</span></a></li>
+        <li><a href = "dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href = "category.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
+        <li><a href = "productlist.php"><i class="fa fa-shopping-bag"></i> <span>Product List</span></a></li>
+        <li><a href = "addproduct.php"><i class="fa fa-plus"></i> <span>Add Products</span></a></li>
+        <li><a href = "#"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
+        <li><a href = "createorder.php"><i class="fa fa-eur"></i> <span>Create Order</span></a></li>
+        <li><a href = "orderlist.php"><i class="fa fa-list-alt"></i> <span>Order List</span></a></li>
+        <li><a href = "#"><i class="fa fa-money"></i> <span>Billing</span></a></li>
+        <li><a href = "registeration.php"><i class="fa fa-users"></i> <span>Users</span></a></li>
        
        
       </ul>
