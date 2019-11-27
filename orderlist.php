@@ -72,7 +72,7 @@
                                       <td>'.$row->payment_type.'</td>
                                                                            
                                       <td>
-                                          <a href="viewproduct.php?id='.$row->invoice_id.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-print" style="color:#ffffff" data-toggle="tool-tip" title="Print Invoice"></span></a>
+                                          <a href="invoice_db.php?id='.$row->invoice_id.'" class="btn btn-success btn-sm" role ="button" name="viewButton"><span class="glyphicon glyphicon-print" style="color:#ffffff" data-toggle="tool-tip" title="Print Invoice"></span></a>
                                         </td>
                                      
                                      <td>
@@ -80,7 +80,7 @@
                                       </td>
                                      
                                      <td>
-                                        <button id='.$row->invoice_id.' class="btn btn-danger btn-sm btndanger btndelete"><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tool-tip" title="Delete Order"></span></button>
+                                          <button id='.$row->invoice_id.' class="btn btn-danger btndelete" ><span class="glyphicon glyphicon-trash" style="color:#ffffff" data-toggle="tooltip"  title="Delete Order"></span></button>  
                                       </td>
                                     </tr> 
                                   ';
@@ -89,8 +89,6 @@
                       </tbody>
                     </table>
                   </div>
-
-            
           </div>
 
     </section>
@@ -111,6 +109,64 @@
     } );
 
   </script>
+
+
+    <script>
+      $(document).ready( function () {
+      $('[data-toggle="tooltip"]').tooltip();
+      } );  
+
+         
+       $(document).ready(function() {
+      $('.btndelete').click(function() {
+          var tdh = $(this);
+          var id = $(this).attr("id");
+           swal({
+      title: "Are you sure?",
+      text: "Once deleted, you can't retrieve order details.",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+  .then((willDelete) => {
+      if (willDelete) {
+        
+         $.ajax({
+                  url: 'orderdelete.php',
+                  type: 'post',
+                  data: {
+                  pidd: id
+                  },
+                  success: function(data) {
+                  tdh.parents('tr').hide();
+                  }
+
+
+                });
+        
+        
+        
+      swal("Order Deleted.", {
+        icon: "success",
+      });
+      } else {
+      swal("Your order is not deleted.");
+      }
+    });
+            
+                     
+
+        });
+    });     
+       
+       
+       
+       
+       
+    
+</script>
+
+
  <?php
 	
 	include_once('inc/footer.php');
