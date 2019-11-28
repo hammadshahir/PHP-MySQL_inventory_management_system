@@ -35,6 +35,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="plugins/iCheck/icheck.min.js"></script>
   <!-- Select2 -->
   <script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+  
+  <script type="chartjs/dist/Chart.min.js"></script>
+  <script type="chartjs/dist/Chart.min.js"></script>
+  <script type="chartjs/dist/Chart.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 
   <title>Dashboard | Administrator</title>
@@ -51,13 +57,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
-
-  
-  
-
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
+  
   <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -81,6 +84,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/iCheck/all.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css">
+
+  <link rel="stylesheet" type = "text/css" href = "chartjs/dist/Chart.css">
+  <link rel="stylesheet" type = "text/css" href = "chartjs/dist/Chart.min.css">
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -199,17 +206,52 @@ desired effect
       <ul class="sidebar-menu" data-widget="tree">
         <!-- <li class="header">Menu</li> -->
         
-        <li><a href = "dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li><a href = "category.php"><i class="fa fa-list-alt"></i> <span>Categories</span></a></li>
-        <li><a href = "productlist.php"><i class="fa fa-shopping-bag"></i> <span>Product List</span></a></li>
-        <li><a href = "addproduct.php"><i class="fa fa-plus"></i> <span>Add Products</span></a></li>
-        <li><a href = "#"><i class="fa fa-area-chart"></i> <span>Sales</span></a></li>
-        <li><a href = "createorder.php"><i class="fa fa-eur"></i> <span>Create Order</span></a></li>
-        <li><a href = "orderlist.php"><i class="fa fa-list-alt"></i> <span>Order List</span></a></li>
-        <li><a href = "#"><i class="fa fa-money"></i> <span>Billing</span></a></li>
-        <li><a href = "registeration.php"><i class="fa fa-users"></i> <span>Users</span></a></li>
-       
-       
+        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-shopping-basket"></i>
+            <span>Products & Categories</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        <ul class="treeview-menu">
+          
+          <li><a href = "category.php"><i class="fa fa-list-alt"></i> <span>Manage Categories</span></a></li>
+          </li>
+          <li><a href = "addproduct.php"><i class="fa fa-plus"></i> <span>Add Product</span></a></li>
+          <li><a href = "productlist.php"><i class="fa fa-list-alt"></i> <span>Product List</span></a>
+          <li><a href = "productlist.php"><i class="fa fa-minus"></i> <span>Manage Products</span></a>
+        </ul>
+      </li>
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Orders</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = "createorder.php"><i class="fa fa-eur"></i> <span>Create Order</span></a></li>
+          <li><a href = "orderlist.php"><i class="fa fa-list-alt"></i> <span>Manage Orders</span></a></li>
+        </ul>
+      </li>
+      <li class="treeview">
+          <a href="#">
+            <i class="fa fa-area-chart"></i>
+            <span>Reports</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+          <li><a href = "sales_table_report.php"><i class="fa fa-table"></i> <span>Sales Report - Table</span></a></li>
+          <li><a href = "sales_graph_report.php"><i class="fa fa-line-chart"></i> <span>Sales Report - Graph</span></a></li>
+          
+       </ul>
+      </li>
+       <li><a href = "registeration.php"><i class="fa fa-users"></i> <span>Users</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

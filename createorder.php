@@ -181,7 +181,7 @@ if($_SESSION['role']=="Admin") {
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-        <input type="text" class="form-control pull-right" id="datepicker" name="orderdate" value="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd" >
+                                      <input type="text" class="form-control pull-right" id="datepicker" name="orderdate" value="<?php echo date("Y-m-d");?>" data-date-format="yyyy-mm-dd" >
                             </div>
                             <!-- /.input group -->
                         </div>
