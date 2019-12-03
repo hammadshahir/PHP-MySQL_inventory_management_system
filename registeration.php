@@ -9,25 +9,6 @@
     header('location:index.php')  ; 
   } 
     include_once('inc/header.php');  
-  
-
-	 
-
-  // error_reporting(0);
-  // $id = $_GET['id'];
-  
-  // $delete = $pdo->prepare("DELETE FROM tbl_user WHERE userid=".$id);
-  
-  // if($delete->execute()) {
-
-  //   echo 'Delete Successful';
-
-  // }
-
-
-  
-
-  // Save New User Code
 
   if(isset($_POST['btnsave'])) {
 
