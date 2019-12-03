@@ -35,8 +35,7 @@ At this point, following modules are working:
 **Project Recent Images**
 ![alt text](https://media.licdn.com/dms/image/C5622AQF3ytQdPhOlNw/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=wS01tBoy9KQ4GptJvjn-ljookjQ6cySiljFTD_zhIiw)
 ![alt text](https://media.licdn.com/dms/image/C5622AQGKFi5mWKWMrw/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=gYWVINaNNXRhknlxHH8XMwMuEvsO5oWmBxf5t3DmeKU)
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
+![alt text](https://media.licdn.com/dms/image/C5622AQGNoLEg5UL8XQ/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=A90ppZsmLRL6jJ3l3qGY8Tb8eaD4Nz0649usjhVH9Fk)
+![alt text](https://media.licdn.com/dms/image/C5622AQGtHP_y-nFx3Q/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=9ngNItPzeV_D_fSIBKxcH2OyGsRjfqBwhsU3VKtHx7E)
+![alt text](https://media.licdn.com/dms/image/C5622AQHn2YFR492szA/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=epsXjKtznHKS_h775K9JpVdccs0tX0VQ49P2ZkJeF3M)
+![alt text](https://media.licdn.com/dms/image/C5622AQGdCT2zx6gebw/feedshare-shrink_2048_1536/0?e=1578528000&v=beta&t=5vjtLTJiXpNJxc0FY5m8KJqgS9DAIHQYnLdj9Vna5Ps)
