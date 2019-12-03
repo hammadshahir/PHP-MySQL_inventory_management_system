@@ -2,7 +2,9 @@ Introduction
 ============
 **Inventory LTE** is a small inventory management project in PHP, MySQL. It is fully functional script but Beta version.
 
-I used ***AdminLTE*** for backend dashboard which is a fully responsive admin template. Based on **[Bootstrap 3](https://github.com/twbs/bootstrap)** framework. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops. Check out the live preview now and see for yourself.
+I used ***AdminLTE*** for backend dashboard which is a fully responsive admin template. Based on **Bootstrap 4 framework**. 
+
+Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops. Check out the live preview now and see for yourself.
 
 
 At this point, following modules are working:
